@@ -1,0 +1,11 @@
+sti data is the same but behaviour is different
+polymorphism content_type content_id
+  - set up an association between one object and the associated content can by of any type
+
+  #takto zadef metodu na vyhladanie pouz ale aby tam bolo setrenie vyhladavanie tak to priradil 
+  do premennder a preto ju tak nazval lebo aby sa vyhybalo pouzivaniu ju napr vo view alebo inych controlleroch
+  aby sa skor vyuz ta metoda a nie instance variable akoby chcel povedat ze je private ta inastance var ale 
+  pritom nie je lebo ruby take nema
+  def user
+    @_user ||= User.find params[:user_id]	
+  end
